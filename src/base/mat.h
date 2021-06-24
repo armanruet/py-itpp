@@ -356,10 +356,10 @@ void generate_itpp_mat_wrapper(py::module &m, char const * name) {
     .def("__repr__", &_itpp_mat_print_wrap<Num_T>)
     .def("__str__", &_itpp_mat_print_wrap<Num_T>)
 
-//    //! Additional method to support conversion to Numpy ndarray
-//    .def("to_numpy_ndarray", &_itpp_mat_to_numpy_ndarray<Num_T>
-//                           , "Convert py-itpp matrix to numpy ndarray of corresponding datatype"
-//			   , py::args("self")
-//                           , py::return_value_policy<py::return_by_value>())
+    //! Additional method to support conversion to Numpy ndarray
+    .def("to_numpy_ndarray", &_itpp_mat_to_numpy_ndarray<Num_T>
+                           , "Convert py-itpp matrix to numpy ndarray of corresponding datatype"
+			   , py::args("self")
+                           , py::return_value_policy<py::return_by_value>())
 ;
 }
